@@ -1,0 +1,236 @@
+@font-face{
+   font-family: Didot;
+   src:url(Didot-Bold.woff) format('woff');
+}
+body{
+   zoom:80%;
+   font-family: Didot;
+   background: #000;
+   overflow-x:  hidden;
+}
+.content{
+   padding: 0 4.6875vw;
+   text-align: center;
+   position: relative;
+}
+.title{
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   height: 170px;
+   z-index: 100
+}
+.titleSlide{
+   color: #fff;
+   font-size: 170px;
+   letter-spacing: -23.5px;
+   line-height: 1;
+   text-transform: uppercase;
+   transform: matrix(1, 0, 0, 1, 0, 0);
+   position: absolute;
+   top: 40px;
+   left: -30px;
+}
+.controller{
+   width: 100vw;
+   height: auto;
+   position: relative;
+   top:120px;
+   left: -375px;
+   margin-left: 18.5%;
+}
+.controller>button{
+   padding: 10px 20px ;
+   margin: 0 120px;
+   border-radius: 0 !important;
+}
+.cube{
+   position: absolute;
+   width: 400px !important;
+   height: 400px !important;
+   z-index: 550;
+   top: 315px;
+   left: -30px;
+   perspective: 1000px;
+}
+.cube-face{
+   position: absolute;
+   width: 400px !important;
+   height: 400px !important;
+   transform-origin: 50% 50% 0px;
+}
+.box.show-front  { transform: translateZ(-200px) rotateY(0deg); }
+.box.show-right  { transform: translateZ(-200px) rotateY(270deg); }
+.box.show-back   { transform: translateZ(-200px) rotateY(180deg); }
+.box.show-left   { transform: translateZ(-200px) rotateY(90deg); }
+.box{
+   width: 400px;
+   height: 400px;
+   position: relative;
+   transform-style: preserve-3d;
+   transform: translateZ(-200px);
+   transition: transform 1s;
+}
+.coverSet{
+   width: 960px;
+   height: 540px;
+   min-height: 480px;
+   margin-top: 125px;
+   margin-left: 115.5px;
+   background: #ccc;
+   overflow: hidden;
+   position: relative;
+}
+.cube-font{
+   transform: rotateY(0deg) translateZ(200px);
+}
+.cube-back{
+   transform: rotateY(180deg) translateZ(200px);
+}
+.cube-left{
+   transform: rotateY(270deg) translateZ(200px);
+}
+.cube-right{
+   transform: rotateY(90deg) translateZ(200px);
+}
+.coverLeft{
+   width: 50%;
+   position: absolute;
+}
+.coverBgLf{
+   width: 480px;
+   height: 540px;
+   position: relative;
+   background-position: left center;
+}
+.coverImg{
+   position: relative;
+   width: 480px;
+   height: 540px;
+}
+.coverRight{
+   width: 50%;
+   right: 0;
+   position: absolute;
+}
+.coverBgRi{
+   width: 480px;
+   height: 540px;
+   background-size: 200%;
+   position: relative;
+   background-position: right center;
+}
+.cover-l-front{
+   transform:translate3d(0px,0px,0px) !important;
+   -webkit-animation: slideUp1 1s;
+   animation: slideUp1 1s;
+}
+.cover-l-left{
+   transform:translate3d(0px,-540px,0px) !important;
+   -webkit-animation: slideUp2 1s;
+   animation: slideUp2 1s;
+}
+.cover-l-back{
+   transform:translate3d(0px,-1080px,0px) !important;
+   -webkit-animation: slideUp3 1s;
+   animation: slideUp3 1s;
+}
+.cover-l-right{
+   transform:translate3d(0px,-1620px,0px) !important;
+   -webkit-animation: slideUp4 1s;
+   animation: slideUp4 1s;
+}
+.cover-r-right{
+   transform:translate3d(0px,0px,0px) !important;
+   -webkit-animation: slideDown4 1s;
+   animation: slideDown4 1s;
+}
+.cover-r-back{
+   transform:translate3d(0px,-540px,0px) !important;
+   -webkit-animation: slideDown3 1s;
+   animation: slideDown3 1s;
+}
+.cover-r-left{
+   transform:translate3d(0px,-1080px,0px) !important;
+   -webkit-animation: slideDown2 1s;
+   animation: slideDown2 1s;
+}
+.cover-r-front{
+   transform:translate3d(0px,-1620px,0px) !important;
+   -webkit-animation: slideDown1 1s;
+   animation: slideDown1 1s;
+}
+.cover-r-back-b{
+   transform:translate3d(0px,-540px,0px) !important;
+   -webkit-animation: slideUp5 1s;
+   animation: slideUp5 1s;
+}
+.cover-l-back-b{
+   transform:translate3d(0px,-1080px,0px) !important;
+   -webkit-animation: slideDown5 1s;
+   animation: slideDown5 1s;
+}
+.cover-r-left-b{
+   transform:translate3d(0px,-1080px,0px) !important;
+   -webkit-animation: slideUp6 1s;
+   animation: slideUp6 1s;
+}
+.cover-l-left-b{
+   transform:translate3d(0px,-540px,0px) !important;
+   -webkit-animation: slideDown6 1s;
+   animation: slideDown6 1s;
+}
+@keyframes slideUp1 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -540);}
+   100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}
+@keyframes slideDown1 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -1620);}
+}
+@keyframes slideUp2 {
+   0% {transform: matrix(1, 0, 0, 1, 0, 0);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -540);}
+}
+@keyframes slideDown2 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -1620);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+}
+@keyframes slideUp3 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -540);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+}
+@keyframes slideDown3 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -540);}
+}
+@keyframes slideUp4 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -1620);}
+}
+@keyframes slideDown4 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -540);}
+   100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}
+@keyframes slideUp5 {
+   0% {transform: matrix(1, 0, 0, 1, 0, 0);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -540);}
+}
+@keyframes slideDown5 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -1620);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+}
+@keyframes slideUp6 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -540);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+}
+@keyframes slideDown6 {
+   0% {transform: matrix(1, 0, 0, 1, 0, -1080);}
+   100% {transform: matrix(1, 0, 0, 1, 0, -540);}
+}
+
+@keyframes textSlide {
+   0% {transform: matrix(1, 0, 0, 1, 0, 0);opacity: 1}
+   100% {transform: matrix(1, 0, 0, 1, 0, -30);opacity: 0;}
+}
